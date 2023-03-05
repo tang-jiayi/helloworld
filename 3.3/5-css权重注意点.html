@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 父亲的权重是100 */
+        #father {
+            color: red;
+        }
+
+        /* 继承的权重是0 */
+        /* p继承的权重为0  */
+        p {
+            color: pink;
+        }
+
+        /* 所以以后看标签到底执行哪个样式  就先看这个标签有没有被直接选出来 */
+        /* a链接浏览器默认制定了一个样式   想改变  只有单独指定 */
+        a {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="father">
+        <p>你还是很好看</p>
+    </div>
+    <a href="#">woshi dandu de </a>
+</body>
+
+</html>
