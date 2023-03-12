@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框</title>
+    <style>
+        .yuanxing {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /* 使盒子四个角变成圆角 可以是px 也可以是% */
+            /* border-radius: 10px; */
+
+
+            /* 50%就是宽度和高度的一半 等价于100% 前提是盒子是正方形 */
+            /* 这时候就是圆形 */
+            border-radius: 50%;
+        }
+
+        .juxing {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            /* 圆角矩形设置为高度的一半 */
+            border-radius: 50px;
+        }
+
+        .radius {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* border-radius: 10px 20px 30px 40px;
+            border-radius: 10px 20px ; */
+            /* 只有左上角有圆角 不能换位置*/
+            border-top-left-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 在css中新增了圆角边框样式 这样盒子就可以变为圆角了 -->
+    1、圆形的做法50%就是宽度和高度的一半 等价于100% 前提是盒子是正方形
+    这时候就是圆形
+    <div class="yuanxing"></div>
+    2、圆角矩形的做法圆角矩形设置为高度的一半
+    <div class="juxing"></div>
+    3、该属性是一个简写属性 后面可以跟四个值 分别代表左上角 右上角 右下角 左下角
+    <div class="radius"></div>
+</body>
+
+</html>
