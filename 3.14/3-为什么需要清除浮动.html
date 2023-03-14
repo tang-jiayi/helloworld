@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>为什么需要清除浮动</title>
+    <style>
+        .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <p>清除浮动之后 父级就会根据浮动的子盒子自动检测高度 父级有了高度 就不会影响下面的标准流</p><br>
+    <p>
+        clear:both;(清除左右两侧浮动 常用)<br>
+        clear：left；（清楚左侧浮动）<br>
+        clear：right；（清除右侧浮动）<br>
+        清除浮动的策略是：闭合浮动<br>
+
+
+        清除浮动方法：<br>
+        1、额外标签法也成为隔墙法 是W3C推荐的做法<br>
+        2、父级添加overflow属性<br>
+        3、父级添加after属性<br>
+        4、父级添加双伪元素
+
+    </p><br>
+
+    <div class="box">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+</body>
+
+</html>
