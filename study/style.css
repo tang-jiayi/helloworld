@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 1 确认版心  宽度为1200px  居中对齐 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+/* 4  清除页面中所有的li的小点*/
+li {
+    list-style: none;
+}
+
+/* 使页面中所有的a都没有下划线 */
+a {
+    text-decoration: none;
+}
+
+/* 清除浮动 */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 2 头部样式 调用上面的w类名  不用再给宽度   */
+.header {
+    height: 42px;
+    /* 注意此地方会层叠w里的margin */
+    margin: 30px auto;
+}
+
+/* 3  logo样式   */
+.logo {
+    /* 一浮动都浮动  不然nav也不会浮动 */
+    float: left;
+    width: 198px;
+    height: 42px;
+}
+
+/* 5  给导航栏nav加浮动 
+     因为给了浮动  所以 这个导航栏可以不用给宽度 将来可以继续添加其余文字*/
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+
+/* 6  让导航栏一行显示  给li加浮动 因为li是块级元素 需要一行显示 */
+.nav ul li {
+    float: left;
+    /* 给链接一个左右外边距 增大字与字之间的距离*/
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    /* 将行内元素a转换为块级元素 */
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    /* 让文字垂直居中  使其等于高度 */
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+/* 7  鼠标经过有一个下划线 */
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+
+/* 搜索框 */
+.search {
+    /* 一浮动都浮动 */
+    float: left;
+    width: 412px;
+    height: 42px;
+    /* 给左边距50 */
+    margin-left: 50px;
+}
+
+/* 文本框样式 */
+.search input {
+    float: left;
+    width: 300lpx;
+    height: 40px;
+    /* 给边框设置样式 */
+    border: 1px solid #00a4ff;
+    /* 不需要右边框 */
+    border-right: 0;
+    /* 设置文本框字体颜色 */
+    color: #bfbfbf;
+    font-size: 14px;
+    /* 给文本框一个15像素的边距 把内容挤到右边  因为宽度使360  所以此时会撑大盒子 所以宽度要改为360-15=345 */
+    padding-left: 15px;
+}
+
+/* 按钮样式 */
+/* 行内块元素中间默认有一个空白空隙 所以此时button会掉下来  需要把文本框   button都浮动  就不会有空隙了 */
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    /* button有默认的边框 需要手动清除 */
+    border: 0;
+    /* 添加按钮背景图 */
+    background: url(images/btn.png);
+}
+
+.user {
+    float: left;
+    line-height: 42px;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* banner区域 */
+/* 先设置整个盒子 */
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+
+/* 再设置版心w的盒子 */
+.banner .w {
+    height: 421px;
+    background: url(images/banner2.png) no-repeat top center;
+}
+
+/* 左侧导航栏 */
+.subnav {
+    /* 和course一左一右浮动正好 */
+    float: left;
+    width: 190px;
+    height: 421px;
+    /* 背景半透明 */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* a是行内元素 没有高度 所以要给li高度 */
+.subnav ul li {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+}
+
+.subnav ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* 用span盒子写>    利用右浮动将其置于右侧 */
+.subnav ul li a span {
+    float: right;
+}
+
+
+/*鼠标经过变颜色 */
+.subnav ul li a:hover {
+    color: #00a4ff;
+}
+
+/* y右侧课程表模块 */
+.course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    /* ！！！重要：浮动的盒子不会有外边距合并的问题 */
+    margin-top: 50px;
+}
+
+/* 右侧课程表上面部分 */
+.course h2 {
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* 给整体一个padding */
+.bd {
+    padding: 0 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.bd ul li {
+    padding: 14px 0;
+}
+
+.bd ul li h4 {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+.bd ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.bd .more {
+    /*a属于行内元素 没有大小 要转换为块级元素  下面的样式才能实现  */
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #00a4ff;
+
+}
+
+
+
+/* 精品推荐模块 */
+.goods {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 10px;
+    /* 盒子阴影 */
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.1);
+    /*行高会继承给三个孩子 */
+    line-height: 60px;
+}
+
+
+.goods h3 {
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+.goods ul {
+    float: left;
+    margin-left: 30px;
+}
+
+.goods ul li {
+    float: left;
+}
+
+.goods ul li a {
+    padding: 0 30px;
+    font-size: 16px;
+    border-left: 1px solid #ccc;
+    color: #050505;
+}
+
+.mod {
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+
+/* box核心 */
+.box {
+    margin-top: 30px;
+}
+
+.box-hd {
+    height: 45px;
+}
+
+.box-hd h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+
+.box-hd a {
+    float: right;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+
+/* 把li的父亲ul修改的足够宽   一行能装5个盒子  就不会换行了 */
+.box-bd ul {
+    width: 1225px;
+}
+
+.box-bd ul li {
+    float: left;
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+/* 因为图片比盒子款 所以设置为100%适应盒子的宽度 */
+.box-bd ul li img {
+    width: 100%;
+}
+
+.box-bd ul li h4 {
+    margin: 20px 20px 20px 25px;
+    font-size: 14px;
+    color: #050505;
+    /* 字体不加粗  加粗700 */
+    font-weight: 400；
+}
+
+.box-bd .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.box-bd .info span {
+    color: #ff7c2d;
+}
+
+
+/* footer模块 */
+.footer {
+    height: 415px;
+    background-color: #fff;
+}
+
+.footer .w {
+    /* 此时会出现外边距合并问题 */
+    /* margin-top: 35px; */
+    /* padding内边距不会有合并的问题 */
+    padding-top: 35px;
+}
+
+.copyright {
+    float: left;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0 15px 0;
+}
+
+.copyright .app {
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 33px;
+    color: #00a4ff;
+    font-size: 16px;
+}
+
+.links {
+    float: right;
+}
+
+.links dl {
+    float: left;
+    margin-left: 100px;
+}
+
+.links dl dt a {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.links dl dd a {
+    font-size: 12px;
+    color: #333;
+}
