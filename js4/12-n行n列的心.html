@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = prompt('请输入心的行数');
+        var num2 = prompt('请输入心的列数');
+        var str = '';
+        for (var i = 1; i <= num1; i++) {
+            //外层循环负责打印五行
+            for (var j = 1; j <= num2; j++) {
+                //里层循环负责打印五个心
+                str = str + '🤍';
+            }
+            //如果一行打印完毕五个星星就要另起一行
+            str = str + '\n';
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
