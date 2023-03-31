@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //switch注意事项
+        //1.我们开发里面 表达式经常携程变量
+        /*     var num = 3;
+            swith(num){
+                case 1:
+                console.log(1);
+                break;
+    
+            } */
+
+        //2.我们num的值 和case的值相匹配的时候必须是全等于 值和数据类型必须一致
+
+        var num = '2';
+        switch (num) {
+            case 2:
+                console.log(2);
+                break;
+        }
+
+
+        //3.养成习惯  写break   不然不会退出  会一直输出
+
+        var a = 1;
+        switch (a) {
+            case 1:
+                console.log(1);
+
+            case 2:
+                console.log(2);
+
+            case 3:
+                console.log(3);
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
