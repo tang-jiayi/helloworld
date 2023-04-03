@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //求数组【2，6，1，77，52，25，7】
+        var arr = [2, 6, 1, 77, 52, 25, 7];
+        var max = arr[0];//默认最大值是数组的第一个值
+        for (i = 1; i < arr.length; i++) {//从索引1开始比较
+            if (arr[i] > max) {
+                max = arr[i];//把每一个数组元素都和max比较  如果大于max  则给max赋这个值  否则继续循环下一个元素比较
+            }
+        }
+        console.log('该数组里的最大值是' + max);
+
+
+
+        var arr = [2, 6, 1, 77, 52, 25, 7];
+        var min = arr[0];//默认最小值是数组的第一个值
+        for (i = 1; i < arr.length; i++) {//从索引1开始比较
+            if (arr[i] < min) {
+                min = arr[i];//把每一个数组元素都和max比较  如果大于max  则给max赋这个值  否则继续循环下一个元素比较
+            }
+        }
+        console.log('该数组里的最小值是' + min);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.利用函数求两个数的最大值
+        function getMax(n1, n2) {
+            /* if (n1 > n2) {
+                return n1;
+            } else {
+                return n2;
+            } */
+            return n1 > n2 ? n1 : n2;//三元运算符
+        }
+        console.log(getMax(1, 2));//2
+        console.log(getMax(1, 6));//6
+
+
+        //2.利用函数 求任意一个数组中的最大值
+        // 求数组[5,2,99,101,67,77]最大值
+        function getArrMax(arr) {//arr 接受一个数组
+            var max = arr[0];
+            for (var i = 1; i <= arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+
+            }
+            return max;
+        }
+        // getArrMax([5, 2, 99, 101, 67, 77]);//实参是一个数组送过去
+        //在实际开发里经常用一个变量接收函数的返回结果  使用更简单
+        var re = getArrMax([5, 2, 99, 101, 67, 77]);//数组值可以求任意的
+        console.log(re);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
