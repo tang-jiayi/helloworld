@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // arguments的使用(只有函数才有这个对象  每个函数都内置好了这个arguments)
+        function fn() {
+            /*  console.log(arguments);//里面存储了所有的传递过来的实参
+ 
+             console.log(arguments.length);
+ 
+             console.log(arguments[2]);//输出3 */
+
+            // 可以按照数组的方式遍历arguments
+            for (var i = 0; i <= arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+        }
+        fn(1, 2, 3);
+
+
+
+        //为数组 并不是真正意义上的数组
+        //1.具有数组的length属性
+        //2.按索引方式进行存储
+        //3.没有真正数组的方法  例如push() pop()等
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

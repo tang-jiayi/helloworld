@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 用户输入年份输出当前2月份的天数
+        function backDay() {
+            var year = prompt('请输入年份');
+            /*  if (是闰年) {
+                 alert('当前年份是闰年那2月份有29天');
+             } else {
+                 alert('当前年份不是闰年那2月份有29天');
+             } */
+
+            if (isRunnian(year)) {//调用函数要加小括号  调用下面的函数
+                alert('当前年份是闰年2月份有29天');
+            } else {
+                alert('当前年份是平年2月份有28天');
+            }
+        }
+        backDay();
+
+
+
+
+
+        //判断是否是闰年
+        function isRunnian(year) {
+            //如果是闰年  返回true 否则 返回false
+            var flag = false;
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                flag = true;
+            }
+            return flag;
+
+        }
+        console.log(isRunnian(2000));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

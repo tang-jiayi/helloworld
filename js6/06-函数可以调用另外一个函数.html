@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 函数可以调用另外一个函数
+        function fn1() {
+            console.log(111);//1.先打印111
+            fn2();//去调用fn2 
+            console.log('fn1');//4.打印‘fn1’
+        }
+        function fn2() {
+
+            console.log(222);//2.打印222
+            console.log('fn2'); //3.打印''fn2'
+        }
+        fn1();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
