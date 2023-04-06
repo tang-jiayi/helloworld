@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // new关键字执行过程
+        // 1.new构造函数可以在内存中创建了一个空的对象
+        //2.this会指向刚才创建的空对象
+        //3.开始执行构造函数里面的代码  给这个空对象添加属性和方法
+        //4.返回这个对象  所以构造函数里不需要return
+        function Star(uname, age, sex) {
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (sang) {
+                console.log(sang);
+            }
+
+        }
+        var wyb = new Star('王一博', 26, '男');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 遍历对象
+        var obj = {
+            name: 'pink',
+            age: 19,
+            sex: '男',
+            fn: function () { }//也可以遍历方法  只不过很少用它遍历方法
+
+
+        }
+        // 原始打印方法
+        console.log(obj.name);
+        console.log(obj.age);
+        console.log(obj.sex);
+        //怎样简单遍历所有的
+        // for in 遍历我们的对象
+        // for (遍历in 对象){}
+        for (var k in obj) {
+            console.log(k);//k是变量   得到的是属性
+            console.log(obj.k);//得到的是属性值
+        }
+        // 使用for in里面的变量喜欢写k或者key   前端人员喜欢这样用
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用构造函数创建四个对象  相同属性：名字、年龄、性别   相同方法：唱歌
+        // 构造函数的语法格式
+        /*     function 构造函数名() {
+                this.属性 = 值;
+                this.方法 = function () { }
+            }
+            new 构造函数名(); */
+
+        function Star(uname, age, sex) {//1.构造函数的名字首字母要大写
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (sang) {
+                console.log(sang);
+            }
+
+        }
+        var wyb = new Star('王一博', 26, '男');//实参  调用函数、
+        // console.log(typeof wyb);//调用函数返回的就是一个对象
+        //构造函数不需要return就可以返回结果
+        //调用构造函数必须使用new
+        // 我们只要new Star（）调用函数就创建了一个对象 wyb{}
+        //我们的属性和方法前面必须添加this
+        console.log(wyb.uname);
+        console.log(wyb.age);
+        console.log(wyb.sex);
+        wyb.sing('无感');
+
+        var fcc = new Star('范丞丞', 23, '男');
+        console.log(fcc.uname);
+        console.log(fcc.age);
+        console.log(fcc.sex);
+        fcc.sing('we dont play')
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
